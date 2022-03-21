@@ -2,10 +2,35 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %> Workshop.</p>
+    <p>Welcome to <%= title %> Workshop.</p> <br><br><br>
+
+    <h4><u> About Course</u></h4>
+     <ul>
+        <%posts.forEach((post)=>{ %>
+            <li><b>
+                <%=post.title%>
+                </b>
+            </li>
+            
+            <p>
+                <%=post.body%>
+            </p>
+            <hr>
+        <% })%> 
+    </ul>
+<br><br>
+
+<div>
+  <p><b> For registration:</b> /register</p>
+  <p><b> For user list: </b>/users</p>
+</div>
+
+
   </body>
 </html>
